@@ -1,0 +1,122 @@
+/* Dialog Title */
+::ng-deep .mat-dialog-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f2933;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Dialog Content */
+::ng-deep .mat-dialog-content {
+    padding: 20px 24px;
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+/* Product Image Container */
+.product-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    /* Product Image - 30% Size */
+    .product-image img {
+        width: 30%;
+        max-width: 180px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
+        padding: 6px;
+        background: #fafafa;
+    }
+
+/* Full Width Table */
+.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    /* Table Header */
+    .full-width th.mat-header-cell {
+        background-color: #f8fafc;
+        color: #374151;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    /* Table Cells */
+    .full-width td.mat-cell {
+        padding: 10px 12px;
+        font-size: 13px;
+        color: #111827;
+        vertical-align: middle;
+    }
+
+/* Parts Image */
+.part-image {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Hover Effect */
+.full-width tr.mat-row:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Produce Section */
+.produce-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+    /* Produce Input */
+    .produce-section mat-form-field {
+        width: 180px;
+    }
+
+    /* Produce Button */
+    .produce-section button {
+        min-width: 110px;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .product-image img {
+        width: 50%;
+        max-width: 140px;
+    }
+
+    .produce-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .produce-section mat-form-field {
+            width: 100%;
+        }
+
+        .produce-section button {
+            width: 100%;
+        }
+
+    .full-width th.mat-header-cell,
+    .full-width td.mat-cell {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

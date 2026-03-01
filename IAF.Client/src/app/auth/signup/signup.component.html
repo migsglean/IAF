@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="card">
+        <h2>Create Account</h2>
+
+        <form (ngSubmit)="onSignUp()" #signUpForm="ngForm">
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       [(ngModel)]="signUpData.userName"
+                       required
+                       maxlength="50" />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       [(ngModel)]="signUpData.emailAddress"
+                       required
+                       email />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       [(ngModel)]="signUpData.password"
+                       required />
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password"
+                       id="confirmPassword"
+                       name="confirmPassword"
+                       [(ngModel)]="signUpData.confirmPassword"
+                       required />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" 
+                    [disabled]="!signUpForm.valid"
+                    [ngClass]="{ 'btn-disabled': !signUpForm.valid }">
+                Sign Up
+            </button>
+        </form>
+    </div>
+</div>

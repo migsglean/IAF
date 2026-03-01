@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{ data.productDesc }}</h1>
+
+<div mat-dialog-content>
+    <!-- Product image -->
+    <div class="product-image">
+        <img [src]="'data:image/png;base64,' + data.imageBase64" alt="{{ data.productDesc }}" />
+    </div>
+
+    <!-- Parts grid -->
+    <table mat-table [dataSource]="partsList" class="mat-elevation-z8 full-width">
+        <!-- Parts ID -->
+        <ng-container matColumnDef="partsId">
+            <th mat-header-cell *matHeaderCellDef> Parts ID </th>
+            <td mat-cell *matCellDef="let part"> {{ part.partsId }} </td>
+        </ng-container>
+
+        <!-- Parts Description -->
+        <ng-container matColumnDef="partsDesc">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let part"> {{ part.partsDesc }} </td>
+        </ng-container>
+
+        <!-- Quantity -->
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef> Quantity </th>
+            <td mat-cell *matCellDef="let part"> {{ part.quantity }} </td>
+        </ng-container>
+
+        <!-- Image -->
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let part">
+                <img [src]="'data:image/png;base64,' + part.imageBase64" alt="{{ part.partsDesc }}" class="part-image" />
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['partsId','partsDesc','quantity','image']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['partsId','partsDesc','quantity','image']"></tr>
+    </table>
+
+    <!-- Produce section -->
+    <div class="produce-section">
+        <mat-form-field appearance="fill">
+            <mat-label>Quantity to Produce</mat-label>
+            <input matInput type="number" [(ngModel)]="produceQuantity" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="produce()">Produce</button>
+    </div>
+</div>

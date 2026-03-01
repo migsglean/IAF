@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2752196">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\iaf.client\</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\shared\NewFolder\**" />
+    <TypeScriptConfiguration Remove="src\app\shared\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\auth\forgot-password\" />
+    <Folder Include="src\app\auth\signup\" />
+    <Folder Include="src\app\services\" />
+    <Folder Include="src\app\parts\" />
+    <Folder Include="src\app\product-details\" />
+    <Folder Include="src\app\products\" />
+  </ItemGroup>
+</Project>

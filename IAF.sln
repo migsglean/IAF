@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "IAF.Client", "iaf.client\IAF.Client.esproj", "{8117F9AC-2302-98FE-D2BC-1AEFF8E24AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAF.Server", "IAF.Server\IAF.Server.csproj", "{57578333-88C9-49CF-9B94-2BB45C543965}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8117F9AC-2302-98FE-D2BC-1AEFF8E24AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8117F9AC-2302-98FE-D2BC-1AEFF8E24AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8117F9AC-2302-98FE-D2BC-1AEFF8E24AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8117F9AC-2302-98FE-D2BC-1AEFF8E24AD2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{57578333-88C9-49CF-9B94-2BB45C543965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57578333-88C9-49CF-9B94-2BB45C543965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57578333-88C9-49CF-9B94-2BB45C543965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57578333-88C9-49CF-9B94-2BB45C543965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ED649E6-1DE0-4FD3-A1D9-3B8C513BA08A}
+	EndGlobalSection
+EndGlobal

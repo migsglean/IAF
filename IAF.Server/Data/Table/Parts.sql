@@ -1,0 +1,14 @@
+CREATE TABLE Parts (
+    Parts_ID NVARCHAR(50) NOT NULL PRIMARY KEY,
+    Parts_Desc NVARCHAR(255) NOT NULL,
+    Quantity INT NOT NULL,
+    Image VARBINARY(MAX) NULL,
+    Product_ID NVARCHAR(50) NOT NULL,
+    CreatedAt DATETIME NULL,
+	UpdatedAt DATETIME NULL,
+	DeletedAt DATETIME NULL
+    CONSTRAINT FK_Parts_Products FOREIGN KEY (Product_ID)
+        REFERENCES Products(Product_ID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);

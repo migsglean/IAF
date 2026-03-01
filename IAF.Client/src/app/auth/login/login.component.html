@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+    <h2>IAF WebApp</h2>
+
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text"
+               id="username"
+               name="username"
+               [(ngModel)]="loginData.userName"
+               required />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"
+               id="password"
+               name="password"
+               [(ngModel)]="loginData.password"
+               required />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="!loginForm.valid">
+        Login
+      </button>
+    </form>
+
+    <!-- Links -->
+    <div class="links">
+      <a routerLink="/auth/signup">Sign Up?</a>
+      <a routerLink="/auth/forgot-password">Forgot Password?</a>
+    </div>
+  </div>
+</div>

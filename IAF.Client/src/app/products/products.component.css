@@ -1,0 +1,92 @@
+/* Main Container */
+.product-table {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 70%);
+}
+
+    /* Title */
+    .product-table h2 {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #1f2933;
+    }
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Material Table */
+.custom-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    /* Header Cells */
+    .custom-table th.mat-header-cell {
+        background-color: #f8fafc;
+        color: #374151;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    /* Data Cells */
+    .custom-table td.mat-cell {
+        padding: 14px;
+        font-size: 14px;
+        color: #111827;
+    }
+
+    /* Row Hover */
+    .custom-table tr.mat-row:hover {
+        background-color: #f1f5f9;
+        transition: background-color 0.2s ease;
+    }
+
+/* Clickable Row */
+.clickable-row {
+    cursor: pointer;
+}
+
+    /* Active Row (Optional) */
+    .clickable-row:active {
+        background-color: #e2e8f0;
+    }
+
+/* Sort Header Arrow */
+::ng-deep .mat-sort-header-arrow {
+    color: #2563eb;
+}
+
+/* Paginator */
+mat-paginator {
+    margin-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .product-table {
+        padding: 16px;
+    }
+
+    .custom-table th.mat-header-cell,
+    .custom-table td.mat-cell {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .product-table h2 {
+        font-size: 18px;
+    }
+}

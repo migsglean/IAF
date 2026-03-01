@@ -1,0 +1,121 @@
+/* Main Container */
+.parts-table {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 70%);
+}
+
+    /* Title */
+    .parts-table h2 {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #1f2933;
+    }
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Material Table */
+.parts-table-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    /* Header Cells */
+    .parts-table-table th.mat-header-cell {
+        background-color: #f8fafc;
+        color: #374151;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    /* Data Cells */
+    .parts-table-table td.mat-cell {
+        padding: 12px 14px;
+        font-size: 14px;
+        color: #111827;
+        vertical-align: middle;
+    }
+
+/* Hover Row */
+.row-hover:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Table Image */
+.table-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Action Buttons */
+.parts-table-table td.mat-cell button {
+    margin-right: 6px;
+    min-width: 64px;
+}
+
+/* Paginator */
+mat-paginator {
+    margin-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 10px;
+}
+
+/* Add Button */
+.parts-table > button {
+    margin-top: 16px;
+    float: right;
+}
+
+/* Clear Float */
+.parts-table::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Sort Arrow Color */
+::ng-deep .mat-sort-header-arrow {
+    color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .parts-table {
+        padding: 16px;
+    }
+
+    .parts-table-table th.mat-header-cell,
+    .parts-table-table td.mat-cell {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .table-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .parts-table h2 {
+        font-size: 18px;
+    }
+
+    .parts-table > button {
+        width: 100%;
+        float: none;
+    }
+}

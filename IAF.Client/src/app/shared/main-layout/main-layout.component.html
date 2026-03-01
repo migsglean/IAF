@@ -1,0 +1,45 @@
+﻿<div class="layout-container">
+    <!-- Header -->
+    <header class="layout-header">
+        <div class="header-title">Inventory Assets Forecasting</div>
+        <div class="header-user-container" (click)="toggleUserMenu()">
+
+            <!-- Circle Avatar -->
+            <div class="user-avatar">
+                {{ userName.charAt(0) | uppercase }}
+            </div>
+
+            <!-- Username -->
+            <span class="user-name">
+                {{ userName }}
+            </span>
+
+            <!-- Dropdown -->
+            <div class="user-dropdown" *ngIf="showUserMenu">
+                <div class="dropdown-item" (click)="goToSettings()">⚙ Settings</div>
+                <div class="dropdown-item" (click)="logout()">⎋ Logout</div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="layout-body">
+        <!-- Sidebar Navigation -->
+        <nav class="layout-sidebar">
+            <ul>
+                <li><a routerLink="/main-layout/products" routerLinkActive="active">Products</a></li>
+                <li><a routerLink="/main-layout/parts" routerLinkActive="active">Parts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="layout-content">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="layout-footer">
+        &copy; 2026 Inventory Assets Forecasting. All rights reserved.
+    </footer>
+</div>
