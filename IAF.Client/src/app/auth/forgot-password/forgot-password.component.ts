@@ -12,14 +12,15 @@ export class ForgotPasswordComponent {
 
   constructor(private authService: AuthService) { }
 
-  onForgotPassword() {
-    this.authService.forgotPassword(this.forgotData).subscribe({
-      next: () => {
-        SwalHelper.success('Password reset instructions sent to your email.');
-      },
-      error: () => {
-        SwalHelper.error('Error resetting password.');
-      }
-    });
-  }
+    onForgotPassword() {
+        SwalHelper.warning('This feature not yet implemented.')
+        //this.authService.forgotPassword(this.forgotData).subscribe({
+        //  next: () => {
+        //    SwalHelper.info('Password reset instructions sent to your email.');
+        //  },
+        //  error: () => {
+        //    SwalHelper.error('Error resetting password.');
+        //  }
+        //});
+    }
 }

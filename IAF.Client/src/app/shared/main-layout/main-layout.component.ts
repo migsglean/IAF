@@ -26,7 +26,7 @@ export class MainLayoutComponent implements OnInit {
     }
 
     goToSettings() {
-        
+        SwalHelper.warning('This feature not yet implemented.')
     }
 
     logout() {
