@@ -55,8 +55,8 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// Middleware pipeline
 app.UseHttpsRedirection();
+app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
 
